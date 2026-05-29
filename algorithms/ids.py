@@ -12,9 +12,10 @@ def is_cycle(node: Node):
     
     return False
 
-
+# Thuật toán Ids cách tiếp cận 1
 def iterative_deepening_search_version_1(start, goal):
-    max_depth = 100
+    """Thuật toán IDS (duyệt theo từng độ sâu) cách tiếp cận 1"""
+    max_depth = 100 # Đặt ngưỡng an toàn, tránh cho lặp vô hạn
     for depth in range(0, max_depth+1):
         result = depth_limited_search_version_1(start, goal, depth)
 
@@ -49,8 +50,9 @@ def depth_limited_search_version_1(start, goal, l):
         
     return result
 
-# Ids với cách tiếp cận 1
+# Ids với cách tiếp cận 2
 def iterative_deepening_search_version_2(start, goal):
+    """Thuật toán IDS (duyệt theo từng độ sâu) cách tiếp cận 2"""
     max_depth = 100
     for depth in range(0, max_depth+1):
         result = depth_limited_search_version_2(start, goal, depth)
@@ -63,7 +65,7 @@ def iterative_deepening_search_version_2(start, goal):
     
     return None
 
-# Ids với cách tiếp cận 2
+
 def depth_limited_search_version_2(start, goal, l):
     frontier = [Node(start, None, None, 0)]
     
