@@ -8,11 +8,13 @@ def is_state_in_frontier(child_state, frontier):
     
     return False
 
+# reached là set(), vì vậy state lưu vào phải là tuple (không được list)
 def is_state_in_reached(child_state, reached):
     return tuple(tuple(row) for row in child_state) in reached
 
 # Dfs với cách tiếp cận 1
 def depth_first_search_version_1(initial, goal_test):
+    """Thuật toán dfs (duyệt sâu) cách tiếp cận 1, sinh ra đưa vào frontier rồi lấy ra mới kiểm tra với goal"""
     node = Node(initial, None, None, 0)
 
     if compare_state(node.state, goal_test):
@@ -41,8 +43,10 @@ def depth_first_search_version_1(initial, goal_test):
 
     return None
 
+
 # Dfs với cách tiếp cận 2
 def depth_first_search_version_2(initial, goal_test):
+    """Thuật toán dfs (duyệt sâu) cách tiếp cận 2, sinh ra kiểm tra lập tức với goal"""
     node = Node(initial, None, None, 0)
 
     if compare_state(node.state, goal_test):
