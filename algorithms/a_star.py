@@ -50,7 +50,7 @@ def pop_lowest_f_node(frontier):
     
     
 def a_star_search(initial, goal_test):
-
+    """Thuật toán A*, g(n) = g(parent) + số ô còn bụi, h(n) bằng khoảng cách manhattan BÉ NHẤT từ robot đến bụi"""
     start = Node(initial, None, None, None)
     g_start = calculate_g_cost(initial)
     h_start = calculate_heuristic(start)
