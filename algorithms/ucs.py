@@ -8,7 +8,7 @@ def is_state_in_frontier(child_state, frontier):
     
     return False
 
-
+# cost tính dựa trên g(n), cài đặt bằng số ô còn bụi
 def calculate_path_cost(node: Node):
     path_cost = 0 if node.parent == None else node.parent.path_cost
 
@@ -19,7 +19,7 @@ def calculate_path_cost(node: Node):
     
     return path_cost
 
-
+# Lấy ra node có cost bé nhất từ frontier
 def pop_lowest_cost_node(frontier):
     lowest_cost_node = min(frontier, key=lambda node: node.path_cost)
 
@@ -27,12 +27,13 @@ def pop_lowest_cost_node(frontier):
 
     return lowest_cost_node, frontier
 
-
+# reached là set lưu tuple 2 giá trị state (dạng tuple) và cost
 def is_state_in_reached(state, path_cost, reached):
     return (tuple(tuple(row) for row in state), path_cost) in reached
     
     
 def uniform_cost_search(initial, goal_test):
+    """Thuật toán ucs, cost (h(n)) được tính bằng số ô còn bụi của trạng thái"""
     node = Node(initial, None, None, None)
     node.path_cost = calculate_path_cost(node)
 
