@@ -12,7 +12,7 @@ def is_state_in_reached(child_state, reached):
     return tuple(tuple(row) for row in child_state) in reached
 
 
-# heuristic cost được tính bằng số ô còn bụi của trạng thái
+# heuristic cost được tính bằng số ô còn bụi của trạng thái, không cộng với cost cha
 def calculate_heuristic_cost(node: Node):
     heuristic_cost = 0
 
@@ -33,6 +33,7 @@ def pop_lowest_cost_node(frontier):
     
     
 def greedy_search(initial, goal_test):
+    """Thuật toán greedy search, h(n) tính bằng số ô còn bụi của trạng thái"""
     node = Node(initial, None, None, None)
     node.path_cost = calculate_heuristic_cost(node)
 
