@@ -9,11 +9,14 @@ def is_state_in_frontier(child_state, frontier):
     
     return False
 
+# reached được cài đặt set(), do đó các state lưu trong đó phải chuyển thành tuple
 def is_state_in_reached(child_state, reached):
     return tuple(tuple(row) for row in child_state) in reached
 
+
 # Bfs với cách tiếp cận 1
 def breadth_first_search_version_1(initial, goal_test):
+    """Thuật toán bfs (duyệt ngang) cách tiếp cận 1, trạng thái sinh ra lưu vào frontier và lúc lấy ra mới kiểm tra với goal_state"""
     node = Node(initial, None, None, 0)
 
     if compare_state(node.state, goal_test):
@@ -42,8 +45,10 @@ def breadth_first_search_version_1(initial, goal_test):
 
     return None
 
+
 # Bfs với cách tiếp cận 2
 def breadth_first_search_version_2(initial, goal_test):
+    """Thuật toán bfs (duyệt ngang) cách tiếp cận 2, trạng thái sinh ra kiểm tra ngay với goal_state"""
     node = Node(initial, None, None, 0)
 
     if compare_state(node.state, goal_test):
