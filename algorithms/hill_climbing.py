@@ -92,3 +92,31 @@ def stochastic_hill_climbing(initial, goal):
             
         else:
             return None
+        
+def randomm_restart_hill_climbing(initial, goal):
+    """Thuật toán leo đồi khởi tạo ngẫu nhiên"""
+    MAX_RESTART = 10    # Cài đặt sẵn MAX_RESTART = 10
+
+    for i in range(1, MAX_RESTART + 1):
+        current_node = Node(initial, None, None, calculate_heuristic_cost(initial))
+    
+        while True:
+            if compare_state(current_node.state, goal):
+                return get_solution(current_node)
+
+            better_neighbor = []
+
+            for action, child_state in gen_actions(current_node.state):
+                child_cost = calculate_heuristic_cost(child_state)
+
+                if child_cost < current_node.path_cost:
+                    better_neighbor.append((action, child_state, child_cost))
+                    
+            if better_neighbor:
+                action, child_state, child_cost = random.choice(better_neighbor)
+                current_node = Node(child_state, current_node, action, child_cost)
+                
+            else:
+                break
+    
+    return None
