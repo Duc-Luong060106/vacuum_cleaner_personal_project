@@ -6,3 +6,5 @@ from .greedy_search import greedy_search
 from .a_star import a_star_search
 from .ida_star import iterative_deepening_a_star
 from .hill_climbing import simple_hill_climbing, steepest_ascent_hill_climbing, stochastic_hill_climbing, randomm_restart_hill_climbing
+from .local_beam_search import local_beam_search
+from .simulated_annealing import simulated_annealing
