@@ -8,3 +8,6 @@ from .ida_star import iterative_deepening_a_star
 from .hill_climbing import simple_hill_climbing, steepest_ascent_hill_climbing, stochastic_hill_climbing, randomm_restart_hill_climbing
 from .local_beam_search import local_beam_search
 from .simulated_annealing import simulated_annealing
+from .sensorless_search import sensorless_search_bfs_version
+from .partial_obs_search import partial_obs_search_bfs_version
+from .and_or_graph_search import and_or_graph_search
