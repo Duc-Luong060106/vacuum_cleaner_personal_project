@@ -93,7 +93,7 @@ def stochastic_hill_climbing(initial, goal):
         else:
             return None
         
-def randomm_restart_hill_climbing(initial, goal):
+def random_restart_hill_climbing(initial, goal):
     """Thuật toán leo đồi khởi tạo ngẫu nhiên"""
     MAX_RESTART = 10    # Cài đặt sẵn MAX_RESTART = 10
 
