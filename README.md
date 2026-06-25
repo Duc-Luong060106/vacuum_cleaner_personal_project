@@ -156,7 +156,97 @@ python caro_gui.py
 
 **1. Vacuum Cleaner**  
 
+**Cửa sổ giao diện**
 
+<div align="center">
+  <img src="assets/vacuum_gui.png" alt="GUI Vacuum" width="700"/>
+</div>
+
+ * **Bên trái**: Cài đặt - chọn thuật toán, kích thước ma trận đầu vào, tạo ngẫu nhiên và chạy thuật toán.
+ * **Phía trên chính giữa**: Sơ đồ phòng chia thành các ô, robot chuyển động từng bước và hút bụi.
+ * **Phía dưới chính giữa**: In ra thời gian chạy thuật toán, số bước di chuyển và chuỗi hành động.
+ * **Bên trái**: Log Panel - Ghi lại thông tin từng bước di chuyển.
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/control_panel.png" width="170px"/><br/>
+      <sub><b>Khu vực điều khiển</b></sub>
+    </td>
+    <td align="center">
+      <img src="assets/map_and_result_panel.png" width="500px"/><br/>
+      <sub><b>Map và kết quả</b></sub>
+    </td>
+    <td align="center">
+      <img src="assets/log_panel.png" width="200px"/><br/>
+      <sub><b>Phần Log</b></sub>
+    </td>
+  </tr>
+</table>
+ 
+**Khi chạy giao diện**
+
+<div align="center">
+  <img src="assets/vacuum_demo.gif" alt="Demo Vacuum Cleaner" width="700"/>
+</div>
+
+**Nhập K trong thuật toán Local Beam Search**
+
+<div align="center">
+  <img src="assets/k_input_local_beam.png" alt="Input K for Local Beam Search" width="700"/>
+</div>
+
+**Tìm kiếm môi Môi trường không nhìn thấy và nhìn thấy 1 phần**  
+
+Chỉ in 1 trạng thái đại diện, phần log ghi lại các trạng thái có trong belief state hiện tại.
+
+<div align="center">
+  <img src="assets/sensorless_demo.gif" alt="Demo Sensorless" width="700"/>
+</div>
+
+**Giao diện And-or search**  
+
+In kết quả dưới dạng cây, ấn chọn để xem kết quả. 
+
+<div align="center">
+  <img src="assets/and_or_search_demo.gif" alt="Demo And-Or Search" width="700"/>
+</div>
+
+**2. CSP Viet Nam map** 
+Kết quả thu được khi trực quan hóa bằng thư viện `Matplotlib`.
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/backtracking_result.png" width="500px"/><br/>
+    </td>
+    <td align="top">
+      <img src="assets/forward_checking_result.png" width="500px"/><br/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/ac_3_result.png" width="500px"/><br/>
+    </td>
+    <td align="top">
+      <img src="assets/min_conflicts_result.png" width="500px"/><br/>
+    </td>
+  </tr>
+</table>
+
+**3. Caro with Adversarial search**   
+
+GUI trò chơi cờ Caro: Chọn Thuật toán và Người đi trước (Agent/Con người) và bắt đầu chơi.
+
+<div align="center">
+  <img src="assets/caro_gui.png" alt="GUI for Caro" width="700"/>
+</div> 
+
+**Demo Caro**
+
+<div align="center">
+  <img src="assets/caro_demo.gif" alt="Demo Caro" width="700"/>
+</div> 
 
 ---
 
